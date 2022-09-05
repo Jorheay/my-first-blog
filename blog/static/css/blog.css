@@ -1,12 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #1f242d;
+}
+
+p {
+    color: #ffffff;
+    
+}
+
 .page-header {
-    background-color: #FFFF00;
+    background-color: #1f242d;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    border: #1f242d;
 }
 
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #080807;
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #080707;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -15,8 +35,141 @@
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+.name {
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #1f242d;
+    padding: 10px 30px;
+    transition: .5s;
+    transition-delay: .8s;
+}
+
+.name:hover {
+    color: #00eeff;
+    letter-spacing: .25em;
+    text-shadow: 0 0 5px #00eeff;
+    transition-delay: 1ms;
+}
+
+.name span {
+    position: absolute;
+    display: block;
+    background: #00eeff;
+    box-shadow: 0 0 5px #00eeff;
+}
+
+.name span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.name:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.name span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.name:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.name span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+.name:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+
+.name span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+.name:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+
+.name span:nth-child(5) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+.name:hover span:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.name span:nth-child(6) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+.name:hover span:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 700;
+    line-height: 30px;
 }
 
 .date {
@@ -24,14 +177,57 @@ h1, h2, h3, h4 {
 }
 
 .save {
-    float: right;
+    background-color: #1f242d;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+    border: 3px solid #00eeff;
+    position: relative;
+    z-index: 1;
 }
 
-.post-form textarea, .post-form input {
+.save:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.save:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #00eeff;
+}
+
+.save:hover:before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+
+.post-form textarea,
+.post-form input {
     width: 100%;
+    color: #020a0a;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
     color: #ffffff;
     float: right;
     font-size: 26pt;
@@ -40,8 +236,14 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    color: #00eeff;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #6DF3BD;
+.post h1 a,
+.post h1 a:visited {
+    color: #00eeff;
+}
+
+.edit{
+    color: #00eeff;
 }
