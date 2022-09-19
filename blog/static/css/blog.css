@@ -160,16 +160,14 @@ p {
 }
 
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     font-family: Arial;
     font-size: 30px;
     font-style: normal;
     font-variant: small-caps;
     font-weight: 700;
     line-height: 30px;
+    color: #00eeff;
 }
 
 .date {

@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="new">
+            <h1 style = "color: #00eeff;">Registro</h1>
+            <h1>
+                <a>{{post.net}}</a>
+                <a>,</a>
+                <a>{{post.net2}}</a>
+                <a>,</a>
+                <a>{{post.net3}}</a>
+            </h1>
+        </div>
+    {% endfor %}
+{% endblock %}
